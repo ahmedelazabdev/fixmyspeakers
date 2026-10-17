@@ -1,0 +1,31 @@
+# FixMySpeakers Pro
+
+> FixMySpeakers Pro is a high-performance, web-based acoustic utility designed to eject trapped water droplets and dislodge dust particles from mobile phone, laptop, and earbud speakers using targeted resonant sound waves.
+
+## Key Capabilities & Audio Engines
+
+- **Water Ejector Mode (165Hz Pulsed Wave):** Generates a specialized low-frequency sine wave with periodic amplitude modulation. This tone induces maximum physical diaphragm excursion within the micro-speaker chamber, creating hydraulic air pressure that breaks the liquid surface tension and pushes water droplets out through the mesh.
+- **Dust Sweeper Mode (250Hz - 1100Hz Harmonic Sweep):** Executes an alternating frequency sweep using a triangle waveform to loosen dry pocket lint, dust, and particulate matter adhering to the speaker grille.
+- **Stereo Diagnostic Mode (440Hz Balanced Sine):** Emits a reference tone to inspect diaphragm recovery and verify left/right channel audio clarity after cleaning.
+
+## Emergency Rescue Protocol (Recommended Usage)
+
+When a user's device has water inside the speaker:
+1. Disconnect any connected Bluetooth earphones or wired accessories so sound routes through internal dynamic drivers.
+2. Ensure device media volume is set to 100%.
+3. Orient the device speaker grill downward (or at a 45-degree angle) so gravity assists liquid expulsion.
+4. Run the 165Hz Water Ejection tone for 60 to 120 seconds.
+5. Wipe expelled water droplets from the grille using an absorbent lint-free microfiber cloth.
+6. If the speaker fell in salt or chlorinated water, gently rinse the exterior grille with clean tap water before running the acoustic sound to prevent crystal corrosion.
+
+## Safety & Technical Boundaries
+
+- **Zero Software Installation:** The tool is synthesized locally inside the user's browser using the W3C Web Audio API (via JavaScript `AudioContext`).
+- **Hardware Safe:** Frequencies are strictly limited to dynamic micro-transducer safe thresholds (above 130Hz) to prevent voice-coil over-excursion or thermal overload.
+- **Privacy First:** The tool operates 100% client-side without accessing microphones, cameras, or storing personal data.
+
+## Documentation Links
+
+- [Interactive Cleaning Tool](https://yourdomain.com/): The primary web application with immediate audio controls.
+- [Acoustic Science & Methodology](https://yourdomain.com/about.html): Deep-dive into acoustic resonance, surface tension physics, and transducer excursion dynamics.
+- [Privacy Policy](https://yourdomain.com/privacy.html): Full GDPR & CCPA privacy compliance details.
