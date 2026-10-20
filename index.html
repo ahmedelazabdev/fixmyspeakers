@@ -419,7 +419,7 @@
       color: var(--text-muted);
     }
 
-    /* Step Banners */
+    /* Step Banners - Fixed Hierarchy */
     .action-steps-bar {
       padding: 16px 20px;
       background: #f8fafc;
@@ -456,7 +456,8 @@
       margin-top: 2px;
     }
 
-    .step-text h4 {
+    .step-title {
+      display: block;
       font-size: 0.95rem;
       font-weight: 700;
       color: var(--text);
@@ -777,26 +778,26 @@
         </div>
       </div>
 
-      <!-- Quick Steps -->
+      <!-- Quick Steps - Corrected Hierarchy (No h4 skips) -->
       <div class="action-steps-bar">
         <div class="action-step">
           <span class="step-num">1</span>
           <div class="step-text">
-            <h4>Max Your Volume</h4>
+            <strong class="step-title">Max Your Volume</strong>
             <p>Turn media volume to 100% to maximize physical diaphragm displacement.</p>
           </div>
         </div>
         <div class="action-step">
           <span class="step-num">2</span>
           <div class="step-text">
-            <h4>Face Speakers Down</h4>
+            <strong class="step-title">Face Speakers Down</strong>
             <p>Tilt your phone downward so gravity helps expel the shaken droplets.</p>
           </div>
         </div>
         <div class="action-step">
           <span class="step-num">3</span>
           <div class="step-text">
-            <h4>Run for 60 Seconds</h4>
+            <strong class="step-title">Run for 60 Seconds</strong>
             <p>Allow the 165Hz frequency to pulse until your audio sounds crisp again.</p>
           </div>
         </div>
@@ -984,7 +985,7 @@
     </div>
   </footer>
 
-  <!-- Web Audio API Acoustic Ejection Engine (Pure JS, Zero Libraries) -->
+  <!-- Web Audio API Acoustic Ejection Engine -->
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
@@ -1040,7 +1041,6 @@
         osc.frequency.setValueAtTime(165, audioCtx.currentTime);
         freqStatus.textContent = 'Active: 165Hz Pulsed Water Ejection Wave';
 
-        // Amplitude Modulation Pulse (High excursion bursts)
         let high = true;
         gainNode.gain.setValueAtTime(1.0, audioCtx.currentTime);
         pulseInterval = setInterval(() => {
