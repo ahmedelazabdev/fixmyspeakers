@@ -1,31 +1,41 @@
-# FixMySpeakers Pro
+# Fix My Speakers — Acoustic Water & Dust Ejector
 
-> FixMySpeakers Pro is a high-performance, web-based acoustic utility designed to eject trapped water droplets and dislodge dust particles from mobile phone, laptop, and earbud speakers using targeted resonant sound waves.
+> Fix My Speakers is a free browser-based audio utility that generates targeted 165Hz pulsed acoustic sound waves to physically eject water droplets and clear dust from device speaker cavities without requiring app installation.
 
-## Key Capabilities & Audio Engines
+## Project Overview
 
-- **Water Ejector Mode (165Hz Pulsed Wave):** Generates a specialized low-frequency sine wave with periodic amplitude modulation. This tone induces maximum physical diaphragm excursion within the micro-speaker chamber, creating hydraulic air pressure that breaks the liquid surface tension and pushes water droplets out through the mesh.
-- **Dust Sweeper Mode (250Hz - 1100Hz Harmonic Sweep):** Executes an alternating frequency sweep using a triangle waveform to loosen dry pocket lint, dust, and particulate matter adhering to the speaker grille.
-- **Stereo Diagnostic Mode (440Hz Balanced Sine):** Emits a reference tone to inspect diaphragm recovery and verify left/right channel audio clarity after cleaning.
+- **Canonical URL**: https://ahmedelazabdev.github.io/fixmyspeakers/
+- **Author**: Ahmed Elazab
+- **Primary Technology**: Web Audio API (Client-side native OscillatorNode & GainNode)
+- **Target Devices**: iPhone, iPad, Android smartphones, Apple Watch, Wear OS smartwatches, AirPods, and laptops.
 
-## Emergency Rescue Protocol (Recommended Usage)
+## Core Features & Frequency Profiles
 
-When a user's device has water inside the speaker:
-1. Disconnect any connected Bluetooth earphones or wired accessories so sound routes through internal dynamic drivers.
-2. Ensure device media volume is set to 100%.
-3. Orient the device speaker grill downward (or at a 45-degree angle) so gravity assists liquid expulsion.
-4. Run the 165Hz Water Ejection tone for 60 to 120 seconds.
-5. Wipe expelled water droplets from the grille using an absorbent lint-free microfiber cloth.
-6. If the speaker fell in salt or chlorinated water, gently rinse the exterior grille with clean tap water before running the acoustic sound to prevent crystal corrosion.
+1. **165Hz Water Eject (Recommended)**:
+   - Alternating amplitude-modulated sine waves at 165 Hz.
+   - Matches the resonance frequency used by Apple Watch Water Lock.
+   - Creates maximum speaker diaphragm displacement (cone excursion) to break water surface tension and push droplets outward.
 
-## Safety & Technical Boundaries
+2. **100Hz – 800Hz Dynamic Sweep**:
+   - Continuous sawtooth sweep designed for mixed debris and deep inner-mesh cleaning.
 
-- **Zero Software Installation:** The tool is synthesized locally inside the user's browser using the W3C Web Audio API (via JavaScript `AudioContext`).
-- **Hardware Safe:** Frequencies are strictly limited to dynamic micro-transducer safe thresholds (above 130Hz) to prevent voice-coil over-excursion or thermal overload.
-- **Privacy First:** The tool operates 100% client-side without accessing microphones, cameras, or storing personal data.
+3. **440Hz Clarity Tone**:
+   - Fixed continuous sine wave designed to clear high-frequency distortion and check audio crispness.
 
-## Documentation Links
+4. **100Hz Heavy Dust Vibration**:
+   - Square wave vibration tailored to dislodge dry dust, pocket lint, and micro-particles.
 
-- [Interactive Cleaning Tool](https://yourdomain.com/): The primary web application with immediate audio controls.
-- [Acoustic Science & Methodology](https://yourdomain.com/about.html): Deep-dive into acoustic resonance, surface tension physics, and transducer excursion dynamics.
-- [Privacy Policy](https://yourdomain.com/privacy.html): Full GDPR & CCPA privacy compliance details.
+## Technical Specifications
+
+- **Performance**: Zero render-blocking assets, 100% Lighthouse Score, Zero Cumulative Layout Shift (CLS = 0.000).
+- **Privacy**: 100% client-side operation; no audio recording, telemetry, or server-side communication.
+- **Safety**: Generates audio within standard operational speaker tolerance (frequencies ranging from 100Hz to 800Hz).
+
+## Step-by-Step Instructions
+
+1. Turn media volume to 100% to ensure maximum cone excursion.
+2. Tilt device downward so speaker holes face gravity.
+3. Start the 60-second 165Hz pulse cycle.
+4. Wipe away expelled liquid beads with a clean microfiber cloth.
+
+ 
